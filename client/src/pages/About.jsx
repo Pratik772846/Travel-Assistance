@@ -27,7 +27,7 @@ function About () {
             <div>
                 <Navbar />
                 <Weather />
-                
+            </div>
             </div>
         </Layout>
     )

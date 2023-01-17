@@ -1,18 +1,22 @@
 import classes from "./Header.module.css"
 import React from "react";
 import useCityStore from "../../store/search_city";
+import {useNavigate} from "react-router-dom";
 
 function Header () {
     const [city, setCity] = React.useState("");
     const addCity = useCityStore((state)=> state.addCity);
+    const navigate = useNavigate();
     function clickHandleChange (e) {
         setCity(e.target.value);
+        console.log(e.target.value);
     }
     const searchLocation= (event) =>{
         if(event.key === 'Enter'){
           console.log("searchedCity");
           addCity({city: city});
           clear();
+          navigate("/about");
         }
     }
 
