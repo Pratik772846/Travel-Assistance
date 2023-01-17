@@ -65,8 +65,17 @@ app.get('/restaurants/:city',(req,res)=>{
             tags.push(list);
         })
 
+        for(var i=0;i<name.length;i++){
+            total.push({
+                name:name[i],
+                review:review[i],
+                // image_link:image_link[i],
+                see_more:see_more[i],
+                tags:tags[i]
+            })
+        }
 
-        res.json(tags);
+        res.json(total);
     })  
         .catch((error) => {
         console.log(error);
