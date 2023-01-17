@@ -1,17 +1,21 @@
-import './Navbar.css'
-function Navbar () {
+import { Link } from 'react-router-dom'
+import "./Navigation.css"
+
+function Navigation () {
     return (
-        <div >
-            <ul className="list">
-                <li className="item"><button>Home</button></li>
-                <li className="item"><button>About</button></li>
-                <li className="item"><button>Blog</button></li>
-                <li className="item"><button>Services</button></li>
-                <li className="item"><button>Contact</button></li>
+        <div>
+        <nav>
+            <ul>
+                <li><Link to="/about">About</Link></li>
+                <li><Link to="/hotels">Hotels</Link></li>
+                <li><Link to="/restaurants">Restaurants</Link></li>
+                <li><Link to="/hospitals">Hospitals</Link></li>
+                <li><Link to="/places-of-interest">Places of Interests</Link></li>
             </ul>
-        </div>
+        </nav>
+    </div>
     )
 }
 
-export default Navbar
+export default Navigation
 
