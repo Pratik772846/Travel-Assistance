@@ -1,25 +1,29 @@
 import Citysearched from "../CitySearched"
 import useCityStore from "../../../store/search_city"
+import RestaurantCard from "./RestaurantCard"
+import classes from './Restaurant.css'
+function Restaurant() {
 
-function Restaurant () {
-
-    const restaurants = useCityStore(state => state.restaurants)
+    // const restaurants = useCityStore(state => state.restaurants)
 
     return (
         <Citysearched>
-        {/* <li className={classes.item}>
-            <div className={classes.image}>
-                <img src={url}/>
+            <div className={classes.container}>
+                <div className={classes.notesList}>
+
+
+
+                    <RestaurantCard
+
+
+                        name="pranav"
+
+                    />
+                    
+
+
+                </div>
             </div>
-            <div className={classes.content}>
-                <p>hello</p>
-                <p>hello</p>
-            </div>
-            <div className={classes.actions}>
-                <button>Info</button>
-                <button id={classes.buttonCart}>button</button>
-            </div>
-        </li> */}
         </Citysearched>
     )
 }
