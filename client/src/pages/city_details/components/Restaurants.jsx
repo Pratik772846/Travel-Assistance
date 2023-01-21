@@ -34,7 +34,7 @@ function Restaurant () {
     return (
         <Citysearched>
         <div className="container">
-        <p className=" text-5xl mb-5 font-sofia">Restaurants</p>
+        <p className=" text-5xl mb-5 font-sofia w-full flex justify-center mt-10">Restaurants</p>
             <div className="List">
             {
                 fetchedRestaurants.map(rest => {

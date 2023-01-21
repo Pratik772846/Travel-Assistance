@@ -10,6 +10,7 @@ import useCityStore from './store/search_city';
 import { useEffect } from 'react';
 import axios from 'axios';
 
+
 function App() {
   const city = useCityStore((state) => state.city_name);
   console.log(city.city);

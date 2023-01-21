@@ -1,7 +1,7 @@
 import React from "react";
 import axios from "axios";
 // const city   = "jaipur";
-import {useCityStore} from "../store/search_city.jsx";
+import useCityStore from "../store/search_city.jsx";
 
 const getallrestaurants = async(city)=>{
     return axios.get(`http://localhost:5000/restaurants/${city}`)
