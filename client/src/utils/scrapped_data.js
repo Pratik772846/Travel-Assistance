@@ -29,5 +29,14 @@ const getCityAbout = (city) => {
     })
 }
 
-export {getallrestaurants, getallplacestovisit, getCityAbout};
+const getCityImages = (city) => {
+    let URL = `http://localhost:5000/city_images/${city}`
+    return axios.get(URL)
+    .then (response => {
+        console.log (response.data)
+        return response.data
+    })
+}
+
+export {getallrestaurants, getallplacestovisit, getCityAbout, getCityImages};
 
