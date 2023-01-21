@@ -10,6 +10,7 @@ import About from './pages/city_details/components/About';
 import PlacesOfInterests from './pages/city_details/components/PlacesOfInterests';
 import useCityStore from './store/search_city';
 import {getallplacestovisit,getallrestaurants} from "./utils/scrapped_data.js";
+import {getHotelData} from "./utils/api.js";
 
 function App() {
 

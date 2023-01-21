@@ -1,14 +1,14 @@
 import axios from 'axios';
 
-export const getPlacesData = async () => {
+export const getHotelData = async (latitude,longitude) => {
   try {
-    const { data: { data } } = await axios.get(`https://booking-com.p.rapidapi.com/v1/hotels/search-by-coordinates`, {
+    const  { data }  = await axios.get(`https://booking-com.p.rapidapi.com/v1/hotels/search-by-coordinates`, {
         params: {
-            longitude: '-18.5333',
+            longitude: longitude,
             filter_by_currency: 'AED',
             room_number: '1',
             locale: 'en-gb',
-            latitude: '65.9667',
+            latitude:latitude,
             order_by: 'popularity',
             units: 'metric',
             checkin_date: '2023-07-15',
