@@ -1,14 +1,14 @@
 import axios from 'axios';
 
-export const getHotelData = async (latitude,longitude) => {
+export const getHotelData = (latitude,longitude) => {
   try {
-    const  { data }  = await axios.get(`https://booking-com.p.rapidapi.com/v1/hotels/search-by-coordinates`, {
+    return axios.get(`https://booking-com.p.rapidapi.com/v1/hotels/search-by-coordinates`, {
         params: {
             longitude: longitude,
             filter_by_currency: 'AED',
             room_number: '1',
             locale: 'en-gb',
-            latitude:latitude,
+            latitude: latitude,
             order_by: 'popularity',
             units: 'metric',
             checkin_date: '2023-07-15',
@@ -21,12 +21,14 @@ export const getHotelData = async (latitude,longitude) => {
             children_ages: '5,0'
           },
           headers: {
-            'X-RapidAPI-Key': 'bb7cb87919msh9aecc67d025c46dp104129jsnb53d7d4da3b1',
+            'X-RapidAPI-Key': '22f73b73famsh309f192d9633dd0p1ca9afjsn3db70240ead7',
             'X-RapidAPI-Host': 'booking-com.p.rapidapi.com'
           }
-    });
-    console.log(data);
-    return data;
+    })
+    .then (response => {
+        console.log (response.data)
+        return response.data
+    })
     
   } catch (error) {
     console.log(error);
