@@ -19,6 +19,7 @@ function App() {
   const addLatitude = useCityStore(state => state.addLatitude)
   const addLongitude = useCityStore(state => state.addLongitude)
   const setDescription = useCityStore(state => state.setDescription)
+  const setIcon = useCityStore(state => state.setIcon)
 
   useEffect (()=> {
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${city.city}&appid=4bc833dea642dd07a0351cee82fb0cf8`
@@ -28,6 +29,7 @@ function App() {
         addLatitude({latitude : response.data.coord.lat})
         addLongitude({longitude : response.data.coord.lon})
         setDescription(response.data.weather[0].main)
+        setIcon(response.data.weather[0].icon)
       })
   }, [city.city])
 
