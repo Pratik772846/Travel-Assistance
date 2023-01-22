@@ -13,7 +13,7 @@ function About () {
             const data = await getallplacestovisit(city.city)
             setFetchedPlaces(data)
         })()
-    },[])
+    },[city])
 
     if (fetchedPlaces == null) {
         return (

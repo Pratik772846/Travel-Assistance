@@ -8,6 +8,7 @@ const useCityStore = create((set) => ({
     longitude: "",
     restaurants : [],
     description : "",
+    icon:"",
     addRestaurant : (restaurant) => set(state => [...state.restaurants, restaurant]),
     addCity: (city) => set((state) => ({ city_name: city })),
     addTemp :(temp)=> set((state) => ({ temp: temp })),
@@ -16,6 +17,7 @@ const useCityStore = create((set) => ({
     setDescription : (description)=>set(state => ({description : description})),
     changeIsLoading : ()=> set(state => ({isLoading : state.isLoading + 1})),
     resetIsLoading : ()=>set(state => ({isLoading : 0})),
+    setIcon : (icon)=>set(state => ({icon : icon})),
   }))
 
 export default useCityStore;
