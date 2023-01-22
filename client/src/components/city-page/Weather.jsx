@@ -14,6 +14,10 @@ function Weather() {
       <div className='weather flex flex-col justify-start items-center gap-5 pt-16'>
         <h1 className='temp font-impact text-5xl'>{Math.floor(temp.temp - 273.5)}°C</h1>
         <p className='day'> {description} </p>
+        <p>
+          
+          {/* http://openweathermap.org/img/w/${data.weather[0].icon}.png */}
+        </p>
       </div>
     )
 
