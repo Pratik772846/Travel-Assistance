@@ -1,11 +1,13 @@
 # Setup
-
 ```
-cd server/scrap
+cd server
+npm update
+cd scrap
 nodemon details.js
 ```
 ```
 cd client
+npm update
 npm start
 ```
 # Description
